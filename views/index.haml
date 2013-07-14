@@ -1,0 +1,15 @@
+%h2 Buildpack Repositories
+
+%p Found #{@buildpacks.size} buildpacks in #{@repositories.size} repositories.
+
+%ul
+- @buildpacks.each do |repo|
+  %li= repo.name
+  
+%h2 Buildpacks by Popularity Score
+
+%p Popularity score of a buildpack is calculated by its github repository meta data as follows: (number of watchers + forks) / 2.
+
+%ul
+- @popularity_ranking.keys.sort.reverse.each do |popularity_score|
+  %li= popularity_score.to_s + " " + @popularity_ranking[popularity_score].name

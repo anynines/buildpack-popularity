@@ -1,0 +1,8 @@
+h1. Buildpack Popularity
+
+Very simple heuristic to calculate a heroku buildpack popularity score using buildpack repository
+meta data.
+
+h2. Usage
+
+Just run the app and visit "/"
